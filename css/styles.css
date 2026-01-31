@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.company-logo-wrapper {
+    position: relative;
+}
+
+.company-logo-wrapper::after {
+    content: "";
+    position: absolute;
+    background-color: #dee2e6;
+    width: 1px;
+    top: -27px;
+    right: 0px;
+    bottom: -27px;
+}
