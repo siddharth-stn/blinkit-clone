@@ -11,6 +11,10 @@
     font-style: normal;
 }
 
+.border-red {
+    border: 3px solid red !important;
+}
+
 .company-logo-wrapper {
     position: relative;
 }
@@ -23,4 +27,61 @@
     top: -27px;
     right: 0px;
     bottom: -27px;
+}
+
+.essential-cards-outer .card {
+    width: 350px;
+}
+
+.daily-needs-outer > div {
+    width: 10%;
+}
+
+.cards-outer .image-wrapper {
+    position: relative;
+}
+
+.tobacco-outer .cards,
+.dairy-outer .cards {
+    padding-bottom: 10px;
+}
+
+.tobacco-outer .cards-outer .image-wrapper::before,
+.dairy-outer .cards-outer .image-wrapper::before {
+    content: "";
+    background-image: url("../images/homepage-images/off.svg");
+    width: 30px;
+    height: 28px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+.tobacco-outer .cards-outer .image-wrapper::after,
+.dairy-outer .cards-outer .image-wrapper::after {
+    content: "⏱️ 12 mins";
+    font-size: 0.7rem;
+    width: 100%;
+    height: 28px;
+    position: absolute;
+    bottom: -27px;
+    left: 0px;
+}
+
+.tobacco-outer .cards-outer .offer,
+.dairy-outer .cards-outer .offer {
+    position: absolute;
+    top: 2px;
+    left: 25px;
+    font-size: 0.55rem;
+    font-weight: bold;
+    color: white;
+    /*z-index: 999;*/
+}
+
+.cards .text-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
