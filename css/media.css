@@ -1,0 +1,21 @@
+@media only screen and (max-width: 1023px) {
+    .delivery-message {
+        margin-bottom: 10px;
+        margin-left: 0px !important;
+    }
+
+    .search-bar {
+        margin-left: 0px !important;
+    }
+}
+
+/* Custom Utility: Border Bottom only on Large screens (Desktop) */
+@media (min-width: 992px) {
+    .border-lg-bottom {
+        border-bottom: 1px solid #dee2e6 !important;
+    }
+
+    .shadow-lg-sm {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    }
+}

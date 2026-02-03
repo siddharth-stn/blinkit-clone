@@ -18,16 +18,20 @@
     <body>
         <div class="container-fluid p-0 inter-font">
             <header
-                class="py-2 px-4 border-bottom shadow-sm sticky-top bg-white"
+                class="py-2 px-4 border-lg-bottom shadow-lg-sm sticky-top bg-white"
             >
-                <div class="navbar navbar-expand-lg d-flex align-items-center">
-                    <figure class="m-0 pe-3 company-logo-wrapper">
+                <div class="navbar navbar-expand-lg">
+                    <figure
+                        class="m-0 pe-3 company-logo-wrapper d-none d-lg-block"
+                    >
                         <img
                             src="./images/homepage-images/logo.svg"
                             alt="company-logo"
                         />
                     </figure>
-                    <div class="tagLine d-flex flex-column ms-5">
+                    <div
+                        class="tagLine d-flex flex-column ms-5 delivery-message"
+                    >
                         <span class="fw-bold text-nowrap"
                             >Delivery in 12 minutes</span
                         >
@@ -35,8 +39,36 @@
                             class="underBar py-2 bg-secondary-subtle rounded"
                         ></div>
                     </div>
+                    <div class="profil-btn d-lg-none">
+                        <svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M16 5.33317C10.1089 5.33317 5.33329 10.1088 5.33329 15.9998C5.33329 21.8909 10.1089 26.6665 16 26.6665C21.891 26.6665 26.6666 21.8909 26.6666 15.9998C26.6666 10.1088 21.891 5.33317 16 5.33317ZM2.66663 15.9998C2.66663 8.63604 8.63616 2.6665 16 2.6665C23.3638 2.6665 29.3333 8.63604 29.3333 15.9998C29.3333 23.3636 23.3638 29.3332 16 29.3332C8.63616 29.3332 2.66663 23.3636 2.66663 15.9998Z"
+                                fill="black"
+                            ></path>
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M16 10.6667C14.5272 10.6667 13.3333 11.8606 13.3333 13.3333C13.3333 14.8061 14.5272 16 16 16C17.4727 16 18.6666 14.8061 18.6666 13.3333C18.6666 11.8606 17.4727 10.6667 16 10.6667ZM10.6666 13.3333C10.6666 10.3878 13.0544 8 16 8C18.9455 8 21.3333 10.3878 21.3333 13.3333C21.3333 16.2789 18.9455 18.6667 16 18.6667C13.0544 18.6667 10.6666 16.2789 10.6666 13.3333Z"
+                                fill="black"
+                            ></path>
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M11.2674 23.2783C10.3653 23.6502 9.8256 24.2056 9.46237 25.1467C9.19724 25.8337 8.42539 26.1757 7.73839 25.9106C7.0514 25.6454 6.70941 24.8736 6.97455 24.1866C7.59355 22.5827 8.65364 21.4714 10.2512 20.8129C11.7534 20.1936 13.6722 20 15.9998 20C18.3392 20 20.2689 20.1812 21.775 20.7938C23.3847 21.4487 24.4443 22.5677 25.0551 24.1993C25.3132 24.8889 24.9634 25.6572 24.2737 25.9154C23.5841 26.1735 22.8157 25.8237 22.5576 25.1341C22.199 24.176 21.666 23.6284 20.7702 23.2639C19.7707 22.8573 18.2817 22.6667 15.9998 22.6667C13.7457 22.6667 12.2649 22.8671 11.2674 23.2783Z"
+                                fill="black"
+                            ></path>
+                        </svg>
+                    </div>
                     <div
-                        class="input-group flex-nowrap ms-5"
+                        class="input-group flex-nowrap ms-5 search-bar"
                         style="min-width: 250px"
                     >
                         <span
@@ -61,7 +93,7 @@
                             aria-describedby="addon-wrapping"
                         />
                     </div>
-                    <div class="icons ms-5 d-flex align-items-center">
+                    <div class="icons ms-5 align-items-center d-none d-lg-flex">
                         <span class="fs-5" style="cursor: pointer">Login</span>
                         <div
                             class="myCart-btn p-3 fw-bolder rounded-3 d-flex align-items-center text-white ms-5"
@@ -74,7 +106,7 @@
                     </div>
                 </div>
             </header>
-            <div class="container hero-outer p-0">
+            <div class="container hero-outer p-0 d-none d-lg-block">
                 <div class="hero-inner p-0">
                     <img
                         src="./images/homepage-images/hero.jpg"
@@ -83,7 +115,9 @@
                     />
                 </div>
             </div>
-            <div class="container essential-cards-outer px-4 mt-3">
+            <div
+                class="container essential-cards-outer px-4 mt-3 d-none d-lg-block"
+            >
                 <div class="d-flex gap-4 align-items-start">
                     <div class="card border-0">
                         <img
@@ -108,7 +142,394 @@
                     </div>
                 </div>
             </div>
-            <div class="container daily-needs-outer mt-4 d-flex flex-wrap p-0">
+            <div
+                class="shop-category d-lg-none container d-flex flex-column p-0"
+            >
+                <span><h3 class="fw-bold fs-6 mt-3">Shop by category</h3></span>
+                <div class="category-outer d-flex flex-column">
+                    <div class="category-hero row g-3 mt-1">
+                        <div class="col-6 veg-div">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/veg.png"
+                                    alt="veg"
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-6 dairy-div">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/dairy.png"
+                                    alt="dairy"
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="snacks row g-3 mt-2">
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/munchies.png"
+                                    alt="veg"
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/cold.png"
+                                    alt="veg"
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/instant.png"
+                                    alt="veg"
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all-category row g-3 mt-2">
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/tea.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Tea, Coffee & Milk Drinks</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/bakery.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Bakery & Biscuits</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/sweet.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Sweet Tooth</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/atta.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Atta, Rice & Dal</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/dryfruits.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Dry Fuits, Masala & Oil</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/sauce.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Sauces & Spreads</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/chicken.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Chicken, Meat & Fish</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/paan.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Paan Corner</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/oil.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Organic & Premium</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/baby.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Baby Care</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/whey.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Pharma & Wellness</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/harpic.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Cleaning Essentials</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/air.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Home Furnishing & Decor</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/creame.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Personal Care</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/kutta.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Pet Care</span
+                            >
+                        </div>
+                        <div
+                            class="col-3 d-flex flex-column align-items-center"
+                        >
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/kitchen.png"
+                                    alt="..."
+                                    class="img-fluid object-fit-contain"
+                                />
+                            </div>
+                            <span
+                                class="category-text fw-bolder"
+                                style="font-size: 0.8rem"
+                                >Kitchen & Dining</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-store d-lg-none container d-flex flex-column p-0">
+                <span><h3 class="fw-bold fs-6 mt-3">Shop by store</h3></span>
+                <div class="category-outer d-flex flex-column">
+                    <div class="category-hero row g-2 mt-1">
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/pet.png"
+                                    alt="veg"
+                                    class="rounded-4 img-fluid"
+                                />
+                            </div>
+                            <div class="text-center">
+                                <span
+                                    class="category-text fw-bolder"
+                                    style="font-size: 0.8rem"
+                                    >Pet Store</span
+                                >
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/party.png"
+                                    alt="veg"
+                                    class="rounded-4 img-fluid"
+                                />
+                            </div>
+                            <div class="text-center">
+                                <span
+                                    class="category-text fw-bolder"
+                                    style="font-size: 0.8rem"
+                                    >Pet Store</span
+                                >
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/desert.png"
+                                    alt="veg"
+                                    class="rounded-4 img-fluid"
+                                />
+                            </div>
+                            <div class="text-center">
+                                <span
+                                    class="category-text fw-bolder"
+                                    style="font-size: 0.8rem"
+                                    >Pet Store</span
+                                >
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/small-screen-images/beauty.png"
+                                    alt="veg"
+                                    class="rounded-4 img-fluid"
+                                />
+                            </div>
+                            <div class="text-center">
+                                <span
+                                    class="category-text fw-bolder"
+                                    style="font-size: 0.8rem"
+                                    >Pet Store</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="container daily-needs-outer mt-4 d-none d-lg-flex flex-wrap p-0"
+            >
                 <div class="card border-0">
                     <img
                         src="./images/homepage-images/paan-corner_web.png"
@@ -255,8 +676,10 @@
                     <h3 class="p-0">Dairy, Bread & Eggs</h3>
                     <span class="text-success fs-5">see all</span>
                 </div>
-                <div class="m-0 mt-3 cards-outer row gx-3">
-                    <div class="col-2">
+                <div
+                    class="m-0 mt-3 cards-outer row gx-3 flex-nowrap flex-lg-wrap overflow-x-auto"
+                >
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -302,7 +725,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -348,7 +771,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -394,7 +817,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -440,7 +863,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -486,7 +909,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -542,8 +965,10 @@
                     <h3 class="p-0">Rolling paper & tobacco</h3>
                     <span class="text-success fs-5">see all</span>
                 </div>
-                <div class="m-0 mt-3 cards-outer row gx-3">
-                    <div class="col-2">
+                <div
+                    class="m-0 mt-3 cards-outer row gx-3 flex-nowrap flex-lg-wrap overflow-x-auto"
+                >
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -589,7 +1014,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -635,7 +1060,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -681,7 +1106,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -727,7 +1152,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -773,7 +1198,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-6 col-md-4 col-lg-2">
                         <div class="cards shadow-sm px-3">
                             <div class="image-wrapper">
                                 <img
@@ -821,7 +1246,98 @@
                     </div>
                 </div>
             </div>
-            <footer class="container mt-5 pt-5 bg-white">
+            <div class="germ-free container-fluid d-lg-none p-0">
+                <div class="germ-free-img">
+                    <img
+                        src="../images/footer-images/banner-footer.png"
+                        alt=""
+                        class="img-fluid"
+                    />
+                </div>
+                <div
+                    class="germ-free-items pb-1"
+                    style="background-color: #daf2ff; margin-top: -20px"
+                >
+                    <div class="row g-3 justify-content-around p-2">
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/footer-images/lizal.png"
+                                    alt="..."
+                                    class="img-fluid rounded"
+                                />
+                            </div>
+                            <div
+                                class="text-center fw-bold"
+                                style="font-size: 0.8rem"
+                            >
+                                Surface Cleaner
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/footer-images/pocha.png"
+                                    alt="..."
+                                    class="img-fluid rounded"
+                                />
+                            </div>
+                            <div
+                                class="text-center fw-bold"
+                                style="font-size: 0.8rem"
+                            >
+                                Cleaning Tools
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/footer-images/dustbin.png"
+                                    alt="..."
+                                    class="img-fluid rounded"
+                                />
+                            </div>
+                            <div
+                                class="text-center fw-bold"
+                                style="font-size: 0.8rem"
+                            >
+                                Trash Disposal
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bg-info-subtle rounded-4">
+                                <img
+                                    src="./images/footer-images/vacuum.png"
+                                    alt="..."
+                                    class="img-fluid rounded"
+                                />
+                            </div>
+                            <div
+                                class="text-center fw-bold"
+                                style="font-size: 0.8rem"
+                            >
+                                Cleaning Gadgets
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blink-promo container-fluid p-0 d-lg-none">
+                <div>
+                    <img
+                        src="./images/footer-images/iloveblinkit.png"
+                        alt=""
+                        class="img-fluid"
+                    />
+                </div>
+            </div>
+            <div
+                class="message container-fluid d-lg-none p-0 d-flex justify-content-between p-2 py-2 border"
+            >
+                <div class="fw-bolder">India's last minute app - blinkit</div>
+                <div class="fs-5">&plus;</div>
+            </div>
+            <footer class="container mt-5 pt-5 bg-white d-none d-lg-block">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-4 mb-4">
